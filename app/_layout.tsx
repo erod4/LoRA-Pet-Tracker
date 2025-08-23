@@ -1,29 +1,24 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider'
+import '@/global.css'
+import { Stack } from 'expo-router'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { BleDeviceProvider } from '../context/BluetoothContext'
 
-import { useColorScheme } from '@/hooks/useColorScheme';
 
+export const unstable_settings = {
+  // Ensure any route can link back to `/`
+  initialRouteName: '/home',
+}
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+    <GestureHandlerRootView style={{ flex: 1 }}>
+
+      <GluestackUIProvider mode='system'>
+      <BleDeviceProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+      </BleDeviceProvider>
+        
+      </GluestackUIProvider>
+    </GestureHandlerRootView>
+  )
 }
