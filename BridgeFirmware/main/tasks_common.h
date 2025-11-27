@@ -1,0 +1,7 @@
+#ifndef TASKS_COMMON_H
+#define TASKS_COMMON_H
+
+#define LORA_TASK_STACK_SIZE 4096
+#define LORA_TASK_PRIORITY 3
+
+#endif

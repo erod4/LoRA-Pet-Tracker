@@ -1,0 +1,45 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.espIdfPath": "/Users/enrique/esp/v5.1.6/esp-idf",
+  "idf.pythonInstallPath": "/opt/homebrew/bin/python3",
+  "idf.openOcdConfigs": ["board/esp32c6-builtin.cfg"],
+  "idf.port": "/dev/tty.usbmodem11401",
+  "idf.toolsPath": "/Users/enrique/esp/v5.4.1/esp-idf/tools",
+  "idf.customExtraVars": {
+    "OPENOCD_SCRIPTS": "/Users/enrique/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240318/openocd-esp32/share/openocd/scripts",
+    "ESP_ROM_ELF_DIR": "/Users/enrique/.espressif/tools/esp-rom-elfs/20240305/",
+    "IDF_TARGET": "esp32c6"
+  },
+  "clangd.path": "/Users/enrique/esp/v5.4.1/esp-idf/tools/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=/Users/enrique/esp/v5.4.1/esp-idf/tools/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
+    "--compile-commands-dir=/Users/enrique/BridgeFirmware/build"
+  ],
+  "idf.flashType": "UART",
+  "files.associations": {
+    "*.c": "c",
+    "*.jsx": "javascriptreact",
+    "*.js": "javascript",
+    "*.tsx": "typescriptreact",
+    "nimble_port.h": "c",
+    "esp_nimble_hci.h": "c",
+    "nimble_port_freertos.h": "c",
+    "ble_svc_gap.h": "c",
+    "ble_hs.h": "c",
+    "ble.h": "c",
+    "esp_log.h": "c",
+    "freertos.h": "c",
+    "stdlib.h": "c",
+    "ble_svc_gatt.h": "c",
+    "adc.h": "c",
+    "gpio.h": "c",
+    "sdkconfig.h": "c",
+    "task.h": "c",
+    "ledc.h": "c",
+    "battery.h": "c",
+    "tasks_common.h": "c",
+    "stdbool.h": "c"
+  },
+  "idf.monitorPort": "/dev/tty.usbmodem11401"
+}
